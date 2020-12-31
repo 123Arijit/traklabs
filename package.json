@@ -6,13 +6,14 @@
   "scripts": {
     "tsc": "tsc",
     "start": "node dist",
-    "build": "tsc",
+    "build": "npm run tsc",
     "dev": "ts-node-dev --respawn ./src/index.ts",
     "test": "ava-ts --concurrency 1 **/*.spec.ts",
     "test:model": "ava-ts --concurrency 1 src/model/**/*.spec.ts",
     "test:controller": "ava-ts --concurrency 1 src/controller/**/*.spec.ts",
     "test:router": "ava-ts --concurrency 1 src/router/**/*.spec.ts",
-    "test:service": "ava-ts --concurrency 1 src/service/**/*.spec.ts"
+    "test:service": "ava-ts --concurrency 1 src/service/**/*.spec.ts",
+    "postinstall": "npm run tsc"
   },
   "author": "Arijit Debbarma",
   "license": "MIT",
