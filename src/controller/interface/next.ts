@@ -1,0 +1,1 @@
+export type ControllerNextFunction = (...args: any[]) => any
